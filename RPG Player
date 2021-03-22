@@ -1,0 +1,24 @@
+
+NavMeshAgent playerAgent;
+
+void Start(){
+playerAgent = GetComponent<NavMeshAgent>();
+}
+
+
+if (Input.GetMouseButtonDown(0) && UnityEngine.Eventsystem.current.IsPointerOverGameObject)
+{GetInteraction()}
+
+}
+
+void GetInteraction () {
+  Ray interaction = Camera.main.ScreenPointToRay(Input.mousePosition);
+  RayCastHit interactionInfo;
+    if( Physics.Raycast(interactionRay, out InteractionInfo, Mathf.Infinity))
+      {
+  GameObject interactedObject = interactionInfo.collider.gameObject;
+
+  if(interactedObject.tag ==  "Interactable Object"){
+    Debug.Log("interactable interacted");
+
+  else{ playerAgent.destination = interactionInfo.point;} 
