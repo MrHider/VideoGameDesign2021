@@ -4,3 +4,8 @@ public virtual void MoveToInteraction(NavMeshAgent playerAgent){
   this.playerAgent = playerAgent;
   playerAgents.destination= this.transform.position;
   }
+
+
+public virtual void Interact(){
+  Debug.Log("interaction with base class");
+  }
