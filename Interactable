@@ -2,7 +2,7 @@ public NavMeshAgent playerAgent;
 
 public virtual void MoveToInteraction(NavMeshAgent playerAgent){
   this.playerAgent = playerAgent;
-  playerAgents.destination= this.transform.position;
+  playerAgent.destination= this.transform.position;
   }
 
 
