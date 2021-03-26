@@ -1,0 +1,6 @@
+public class ActionItem() : Interactable {
+  public virtual void Interact()
+  {
+    Debug.Log("Interacting with base action item");
+  }
+    
