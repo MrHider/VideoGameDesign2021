@@ -19,6 +19,6 @@ void GetInteraction () {
   GameObject interactedObject = interactionInfo.collider.gameObject;
 
   if(interactedObject.tag ==  "Interactable Object"){
-    Debug.Log("This is an object you can interact with!");
+    interactedObject.GetComponent<Interactable>().MoveToInteraction(playerAgent);
 
   else{ playerAgent.destination = interactionInfo.point;} 
