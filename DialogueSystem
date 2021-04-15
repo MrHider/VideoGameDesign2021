@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public static DialogueSystem Instance {get; set;}
 
+public string npcName;
 public List<string> dialogueLines = new List<string>();
 
 void Awake (){
@@ -14,9 +15,10 @@ void Awake (){
   }
  }
  
-public void AddNewDialogue(string[] lines){
+public void AddNewDialogue(string[] lines, string npcName){
   dialogueLines = new List<string>(lines.Length);
   dialogueLines.AddRange(lines);
+  this.npcName = npcName;
   }
 
   
