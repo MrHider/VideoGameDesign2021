@@ -1,3 +1,4 @@
+[HideInInspector];
 public NavMeshAgent playerAgent;
 bool hasInteracted;
 
