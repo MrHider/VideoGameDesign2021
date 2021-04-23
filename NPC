@@ -4,6 +4,6 @@ public class NPC : Interactable {
   public string name;
 
   public ovveride void Interact(){
-    DialogueSystem.Instance.AddNewDialogue(dialogue);
+    DialogueSystem.Instance.AddNewDialogue(dialogue, name);
     Debug.Log("interating with NPC");
   }
