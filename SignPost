@@ -1,7 +1,10 @@
 public class SignPost : ActionItem {
 
-public override void Interact ()
+ public string[] dialogue;
+ 
+  public override void Interact ()
   {
+  DialogueSystem.Instance.AddNewDialogue(,"Sign"); 
   Debug.Log("Interacting with sign post");
   }
   
