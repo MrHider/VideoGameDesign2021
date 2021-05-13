@@ -1,0 +1,5 @@
+public interface IWeapon{
+  public List<BaseStat> Stats {get; set;}
+  
+  void PerformAttack();
+
