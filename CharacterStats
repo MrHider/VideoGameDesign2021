@@ -23,7 +23,7 @@ public void AddStatBonus(List<BaseStat> statBonuses)
   {
     foreach (BaseStat statBonus in statBonus)
     {
-    stats.Find(x => x.StatName == statBonus.StatName).AddStatBonus(new StatBonus(statBonus.BaseValue));
+    stats.Find(x => x.StatName == statBonus.StatName).RemoveStatBonus(new StatBonus(statBonus.BaseValue));
     }
   
 
