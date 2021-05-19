@@ -14,4 +14,13 @@ public void EquipWeapon(Item, itemToEquip){
       Destroy(playerHand.transform.GetChild()
       }
       
-      EquippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapon/") +itemToEquip.ObjectSlug));
+      EquippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapon/") +itemToEquip.ObjectSlug), playerHand.transform.position, playerHand.transform.rotation);
+      
+      EquippedWeapon.GetComponent<IWeapon>().Stats = itemToEquip.Stats
+      EquippedWeapon.tranform.SetParent(playerHand.transform);
+      CharacterStats.AddStatBonus(itemToEquip.Stats);
+      }
+      
+      public void PerformWeaponAttack(){
+        EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
+      
