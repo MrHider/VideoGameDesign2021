@@ -1,0 +1,17 @@
+public GameObject playerHand;
+public GameObject EquippedWeapon { get;, set;}
+
+CharacterStats = characterStats;
+
+void Start(){
+characterStats = GetComponent<CharacterStats>();
+
+
+public void EquipWeapon(Item, itemToEquip){
+  
+    if (EqipptedWeapon != null) {
+      characterStats.RemoveStatBonus(EquippedWeapon.GetComponent<IWeapon>().Stats);
+      Destroy(playerHand.transform.GetChild()
+      }
+      
+      EquippedWeapon = (GameObject)Instantiate(Resources.Load<GameObject>("Weapon/") +itemToEquip.ObjectSlug));
