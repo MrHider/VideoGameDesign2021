@@ -3,5 +3,6 @@ public class Sword : Monobehaviour, IWeapon {
 public List<BaseStat> Stats { get; set;}
 
 public void PerformAttack(){
-Debug.Log("Sword Attack!");
-}
+  Debug.Log("Sword Attack!");
+  
+  }
