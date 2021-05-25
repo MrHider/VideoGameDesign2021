@@ -21,6 +21,12 @@ public void EquipWeapon(Item, itemToEquip){
       CharacterStats.AddStatBonus(itemToEquip.Stats);
       }
       
+      void Update()
+      {
+        if(Input.GetKeyDown(KeyCode.X)) {
+          PerformWeaponAttack();
+      }
+      
       public void PerformWeaponAttack(){
         EquippedWeapon.GetComponent<IWeapon>().PerformAttack();
-      
+      }
